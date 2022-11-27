@@ -141,16 +141,19 @@ img {
   margin: 0 0 0 auto;
   padding: 0;
   list-style: none;
+  gap: 50px;
 }
 
-.contact-list {
+/* .contact-list {
   margin-left: auto;
-}
-.contact-list:not(:last-child) {
+} */
+/* .contact-list:not(:last-child) {
   margin-right: 50px;
-}
-.nav-contact .link {
-  display: block;
+} */
+
+/* .nav-contact .link */
+.link {
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -159,18 +162,37 @@ img {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   text-decoration: none;
+  align-items: center;
 }
-.nav-contact .link:hover,
-.nav-contact .link:focus {
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.link:hover,
+.link:focus {
   color: var(--accent-text-color);
+}
+
+.contact-icons {
+  fill: currentColor;
 }
 
 /* hero */
 
 .hero {
   padding: 200px 0;
-  background-color: #2f303a;
+  background-color: #c4c4c4;
   text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/fon-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 .hero-title {
   width: 696px;
@@ -218,6 +240,18 @@ img {
 .about-item:not(:last-child) {
   margin-right: 30px;
 }
+
+.button-icons {
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+}
+
 .about-title {
   margin-bottom: 10px;
   font-size: 14px;
@@ -260,7 +294,7 @@ img {
 
 .card-text {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .team-title {
@@ -284,10 +318,92 @@ img {
   margin-right: 30px;
 }
 
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px 30px;
+}
+
+.social-list {
+  width: 44px;
+  height: 44px;
+}
+
+.social-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+}
+
+.social-link:hover {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
+.social-icons {
+  fill: currentColor;
+}
+
+.section-client {
+  margin: 94px 0;
+}
+
+.client-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  padding-bottom: 50px;
+
+  color: #212121;
+}
+
+.client-list {
+  display: flex;
+}
+
+.client-logo {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.client-logo:not(:last-child) {
+  margin-right: 30px;
+}
+.client-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+}
+
+.client-icons {
+  fill: currentColor;
+}
+
+.client-icons:hover {
+  fill: #2196f3;
+}
+
 /* html + portfolio */
 .footer {
-  padding: 60px 0;
+  padding: 0;
   background-color: #2f303a;
+}
+
+.footer-container {
+  display: flex;
 }
 
 .logo-footer {
@@ -303,9 +419,11 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* .address > ul {
-  list-style: none;
-} */
+.address-container {
+  padding: 60px 0;
+  margin-right: 70px;
+}
+
 .address {
   font-style: normal;
   font-weight: 400;
@@ -325,6 +443,51 @@ img {
   text-decoration: none;
 }
 
+.soc-container {
+  padding: 72px 0 100px;
+}
+.soc-title {
+  font-size: 14px;
+  line-height: 1.14;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-list {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-social-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+
+  /* outline: 1px solid tomato; */
+}
+
+.footer-social-link:hover {
+  background-color: #2196f3;
+}
+
+.footer-social-icons {
+  fill: currentColor;
+}
 /* Стили для portfolio.html */
 
 .filter {
@@ -376,7 +539,7 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   border-radius: 4px;
-  border: 1px solid;
+  border: 1px solid #eeeeee;
   /* цвет бордера по макету #eeeeee */
 }
 .work-list:nth-child(3n) {
